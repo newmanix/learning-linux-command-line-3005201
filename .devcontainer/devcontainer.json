@@ -1,6 +1,9 @@
 {
-  "extensions": [
-    "GitHub.github-vscode-theme"
-  ],
-   "postAttachCommand": "cp -f .bashrc ~/.bashrc && . ~/.bashrc && git pull --all"
+    "name": "LAMP setup",
+    "extensions": [
+        "GitHub.github-vscode-theme"
+    ],
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git apache2 php libapache2-mod-php mariadb-server php-mysqli",
+    "postAttachCommand": "cp -f .bashrc ~/.bashrc && . ~/.bashrc && git pull --all",
+    "forwardPorts": [80]
 }
